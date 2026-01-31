@@ -3,3 +3,7 @@ version: 1.0
 main: io.github.anjoismysign.permissions.ProfilePermissions
 api-version: 1.21.11
 depend: [ BlobLib ]
+commands:
+  profilepermissions:
+    description: base command
+    aliases: [ pp ]
