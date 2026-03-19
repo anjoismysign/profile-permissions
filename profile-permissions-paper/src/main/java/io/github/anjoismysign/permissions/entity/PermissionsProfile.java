@@ -5,6 +5,7 @@ import io.github.anjoismysign.bloblib.entities.Cleanable;
 import io.github.anjoismysign.bloblib.entities.PlayerDecorator;
 import io.github.anjoismysign.bloblib.entities.PlayerDecoratorAware;
 import io.github.anjoismysign.permissions.ProfilePermissions;
+import io.github.anjoismysign.permissions.event.PermissionsAssignEvent;
 import io.github.anjoismysign.psa.crud.Crudable;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
@@ -76,6 +77,8 @@ public final class PermissionsProfile implements Crudable, Cleanable, PlayerDeco
             if (player != null){
                 attachment = player.addAttachment(ProfilePermissions.getInstance());
                 permissions.forEach(attachment::setPermission);
+                PermissionsAssignEvent event = new PermissionsAssignEvent(player);
+                Bukkit.getPluginManager().callEvent(event);
             }
         };
         if (Bukkit.isPrimaryThread()){
