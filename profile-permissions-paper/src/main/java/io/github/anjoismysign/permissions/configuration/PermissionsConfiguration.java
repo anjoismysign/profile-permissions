@@ -1,10 +1,10 @@
 package io.github.anjoismysign.permissions.configuration;
 
-public class OutlawConfiguration {
+public class PermissionsConfiguration {
 
     private boolean tinyDebug;
 
-    OutlawConfiguration() {
+    PermissionsConfiguration() {
     }
 
     public boolean isTinyDebug() {
