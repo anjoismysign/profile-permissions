@@ -1,0 +1,7 @@
+ProfilePermissions:
+  Set-Permission:
+    Type: CHAT
+    Message: '&7Set &f%permission% &7to &f%player% &7as &f%value% &7successfully'
+  Not-A-Permission-Value:
+    Type: CHAT
+    Message: '&cNot a permission''s value! ''true'' or ''false'' expected!'

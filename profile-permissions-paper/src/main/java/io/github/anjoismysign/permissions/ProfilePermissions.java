@@ -79,6 +79,9 @@ public final class ProfilePermissions extends BlobPlugin {
                 },
                 bool);
         setCommand.onExecute(((permissionMessenger, args) -> {
+            if (args.length < 3){
+                return;
+            }
             CommandSender sender = BukkitAdapter.getInstance().of(permissionMessenger);
             Player player = onlinePlayers.parse(args[0]);
             if (player == null) {
@@ -88,12 +91,29 @@ public final class ProfilePermissions extends BlobPlugin {
                 return;
             }
             String permission = args[1];
-            boolean value = Boolean.TRUE.equals(bool.parse(args[2]));
+            @Nullable Boolean value = bool.parse(args[2]);
+            if (value == null){
+                BlobLibMessageAPI.getInstance()
+                        .getMessage("ProfilePermissions.Not-A-Permission-Value", sender)
+                        .toCommandSender(sender);
+                return;
+            }
             var account = getAccount(player);
             if (account == null){
+                BlobLibMessageAPI.getInstance()
+                        .getMessage("Player.Not-Inside-Plugin-Cache", sender)
+                        .toCommandSender(sender);
                 return;
             }
             account.setPermission(permission, value);
+            BlobLibMessageAPI.getInstance()
+                    .getMessage("ProfilePermissions.Set-Permission", sender)
+                    .modder()
+                    .replace("%permission%", permission)
+                    .replace("%player%", player.getName())
+                    .replace("%value%", value.toString())
+                    .get()
+                    .toCommandSender(sender);
         }));
     }
 
