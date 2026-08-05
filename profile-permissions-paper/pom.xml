@@ -6,7 +6,7 @@
     <parent>
         <groupId>io.github.anjoismysign</groupId>
         <artifactId>profile-permissions</artifactId>
-        <version>1.0</version>
+        <version>1.1</version>
     </parent>
 
     <artifactId>profile-permissions-paper</artifactId>
@@ -80,7 +80,7 @@
         <dependency>
             <groupId>io.github.anjoismysign</groupId>
             <artifactId>bloblib</artifactId>
-            <version>1.698.32</version>
+            <version>1.700</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
