@@ -1,8 +1,8 @@
 package io.github.anjoismysign.permissions;
 
 import io.github.anjoismysign.bloblib.api.BlobLibMessageAPI;
-import io.github.anjoismysign.bloblib.managers.BlobPlugin;
-import io.github.anjoismysign.bloblib.managers.cruder.AccountCruder;
+import io.github.anjoismysign.bloblib.manager.BlobPlugin;
+import io.github.anjoismysign.bloblib.manager.cruder.AccountCruder;
 import io.github.anjoismysign.permissions.director.PermissionsManagerDirector;
 import io.github.anjoismysign.permissions.entity.PermissionsAccount;
 import io.github.anjoismysign.permissions.entity.PermissionsProfile;

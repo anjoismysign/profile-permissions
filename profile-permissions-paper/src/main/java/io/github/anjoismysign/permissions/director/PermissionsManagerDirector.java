@@ -1,6 +1,6 @@
 package io.github.anjoismysign.permissions.director;
 
-import io.github.anjoismysign.bloblib.entities.GenericManagerDirector;
+import io.github.anjoismysign.bloblib.manager.GenericManagerDirector;
 import io.github.anjoismysign.permissions.ProfilePermissions;
 import io.github.anjoismysign.permissions.director.manager.ConfigurationManager;
 import org.jetbrains.annotations.NotNull;
