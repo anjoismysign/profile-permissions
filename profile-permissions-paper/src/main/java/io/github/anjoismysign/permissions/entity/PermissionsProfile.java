@@ -1,9 +1,9 @@
 package io.github.anjoismysign.permissions.entity;
 
 import com.google.common.collect.Maps;
-import io.github.anjoismysign.bloblib.entities.Cleanable;
-import io.github.anjoismysign.bloblib.entities.PlayerDecorator;
-import io.github.anjoismysign.bloblib.entities.PlayerDecoratorAware;
+import io.github.anjoismysign.bloblib.domain.Cleanable;
+import io.github.anjoismysign.bloblib.domain.PlayerDecorator;
+import io.github.anjoismysign.bloblib.domain.PlayerDecoratorAware;
 import io.github.anjoismysign.permissions.ProfilePermissions;
 import io.github.anjoismysign.permissions.event.PermissionsAssignEvent;
 import io.github.anjoismysign.psa.crud.Crudable;
